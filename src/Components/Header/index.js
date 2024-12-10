@@ -1,10 +1,11 @@
 import logo from '../../assets/images/logo.png'
 import { Link } from 'react-router-dom';
 import CountryDropdown from '../CountryDropdown';
-import { IoIosSearch } from "react-icons/io";
 import Button from '@mui/material/Button'
 import { FiUser } from "react-icons/fi";
 import { MdShoppingCartCheckout } from "react-icons/md";
+import SearchBox from './SearchBox';
+import Navigation from './Navigation';
 
 
 const Header = () =>{
@@ -27,12 +28,7 @@ const Header = () =>{
                         <div className="part2 col-sm-10 d-flex align-items-center ">
                            <CountryDropdown/>
 
-                           {/* {Header Search Starts Here} */}
-                                <div className='headerSearch ml-3 mr-3'>
-                                        <input type="text" placeholder='Search for products...'/>
-                                        <Button><IoIosSearch/></Button>
-                                </div>
-                           {/* {Header Search Ends Here} */}
+                           <SearchBox/>
                            <div className='part3 d-flex align-items-center ml-auto'>
                                 <Button className='circle mr-3'><FiUser/></Button>
                                 <div className='cartTab d-flex align-items-center ml-auto '>
@@ -47,6 +43,8 @@ const Header = () =>{
                     </div>
                 </div>
             </header>
+
+            <Navigation/>
         </div>
         <footer className="d-none">Shopping Cart icon by Icons8</footer>
         </>
